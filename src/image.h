@@ -77,6 +77,10 @@ void show_image_collapsed(image p, char *name);
 
 void print_image(image m);
 
+#ifdef NUMPY
+image ndarray_to_image(unsigned char *src, long *shape, long *strides);
+#endif
+
 //LIB_API image make_image(int w, int h, int c);
 image make_random_image(int w, int h, int c);
 image make_empty_image(int w, int h, int c);
